@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umoja Ni Nguvu Hotel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ffe082, #ffcc80);
+            margin: 0;
+            padding: 0;
+        }
+
+        #loginPage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #b71c1c, #880e4f);
+            color: #fff;
+        }
+
+        #loginBox {
+            background-color: #fff;
+            color: #000;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        #loginBox h2 {
+            margin-bottom: 20px;
+        }
+
+        #loginBox input {
+            padding: 12px;
+            margin: 12px 0;
+            width: 240px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #loginBox button {
+            padding: 12px 25px;
+            background-color: #b71c1c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #loginBox button:hover {
+            background-color: #d32f2f;
+        }
+
+        header {
+            background: linear-gradient(to right, #b71c1c, #d32f2f);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 5px solid #ffeb3b;
+        }
+
+        nav {
+            background-color: #880e4f;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        .container {
+            padding: 25px;
+        }
+
+        section {
+            background-color: #fff8e1;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: #b71c1c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 5px solid #ffeb3b;
+        }
+
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loginPage">
+        <div id="loginBox">
+            <h2>Login to Umoja Ni Nguvu Hotel</h2>
+            <input type="text" id="username" placeholder="Enter Username"><br>
+            <input type="password" id="password" placeholder="Enter Password"><br>
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div id="mainContent" class="hidden">
+        <header>
+            <h1>Umoja Ni Nguvu Hotel</h1>
+            <p>Delicious Burundian & East African Dishes</p>
+        </header>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="container">
+            <section id="home">
+                <h2>Welcome to Umoja Ni Nguvu!</h2>
+                <p>We serve the best traditional Burundian and East African meals right here in Kakuma, at the heart of the Burundian Market. Come taste authentic, home-cooked goodness!</p>
+            </section>
+
+            <section id="menu">
+                <h2>Our Menu</h2>
+                <p>Special brochettes, Ugali & Sukuma, Burundian Rice & Beans, and more!</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>📞 Call us: <strong>0703253679</strong></p>
+                <p>📍 Location: Kakuma, Burundian Market</p>
+                <p>📧 Email: <a href="mailto:shadrackndayahundwairishura@gmail.com">shadrackndayahundwairishura@gmail.com</a></p>
+
+                <h3>Find us on Google Maps</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.431300775566!2d34.86952205!3d3.7152044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17210e4f48078c3f%3A0x8a52e529dcf51ef3!2sKakuma!5e0!3m2!1sen!2ske!4v1687041842070!5m2!1sen!2ske" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Umoja Ni Nguvu Hotel. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === '!sHaDY' && password === '!sHaDY123') {
+                document.getElementById('loginPage').style.display = 'none';
+                document.getElementById('mainContent').classList.remove('hidden');
+            } else {
+                alert('Wrong username or password!\nTry: !sHaDY / !sHaDY123');
+            }
+        }
+    </script>
+
+</body>
+</html>
