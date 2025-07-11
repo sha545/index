@@ -1,141 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umoja Ni Nguvu Hotel</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #ffe082, #ffcc80);
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <title>UMOJA NI NGUVU HOTEL | Kakuma</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-        #loginPage {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background: linear-gradient(to right, #b71c1c, #880e4f);
-            color: #fff;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
 
-        #loginBox {
-            background-color: #fff;
-            color: #000;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-        }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
 
-        #loginBox h2 {
-            margin-bottom: 20px;
-        }
+    nav {
+      background-color: #34495e;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        #loginBox input {
-            padding: 12px;
-            margin: 12px 0;
-            width: 240px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      margin: 0 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
 
-        #loginBox button {
-            padding: 12px 25px;
-            background-color: #b71c1c;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    nav button:hover {
+      color: #f39c12;
+    }
 
-        #loginBox button:hover {
-            background-color: #d32f2f;
-        }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        header {
-            background: linear-gradient(to right, #b71c1c, #d32f2f);
-            color: #fff;
-            padding: 30px;
-            text-align: center;
-            border-bottom: 5px solid #ffeb3b;
-        }
+    h2 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
 
-        nav {
-            background-color: #880e4f;
-            padding: 12px;
-            text-align: center;
-        }
+    .menu-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            font-size: 16px;
-        }
+    .menu-item {
+      background: #ecf0f1;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
 
-        nav a:hover {
-            color: #ffeb3b;
-        }
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 10px;
+    }
 
-        .container {
-            padding: 25px;
-        }
-
-        section {
-            background-color: #fff8e1;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        }
-
-        footer {
-            background-color: #b71c1c;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            border-top: 5px solid #ffeb3b;
-        }
-
-        iframe {
-            border: 0;
-            width: 100%;
-            height: 300px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
 
-                <h2>Our Menu</h2>
-                <p>Special brochettes, Ugali & Sukuma, Burundian Rice & Beans, and more!</p>
-            </section>
+  <header>
+    <h1>UMOJA NI NGUVU HOTEL</h1>
+    <p>Experience comfort and delicious meals in Kakuma</p>
+  </header>
 
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <p>📞 Call us: <strong>0703253679</strong></p>
-                <p>📍 Location: Kakuma, Burundian Market</p>
-                <p>📧 Email: <a href="mailto:shadrackndayahundwairishura@gmail.com">shadrackndayahundwairishura@gmail.com</a></p>
+  <nav>
+    <button onclick="scrollToSection('menu')">Our Menu</button>
+    <button onclick="scrollToSection('location')">Find Us</button>
+    <button onclick="scrollToSection('contact')">Contact</button>
+  </nav>
 
-                <h3>Find us on Google Maps</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.431300775566!2d34.86952205!3d3.7152044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17210e4f48078c3f%3A0x8a52e529dcf51ef3!2sKakuma!5e0!3m2!1sen!2ske!4v1687041842070!5m2!1sen!2ske" allowfullscreen="" loading="lazy"></iframe>
-            </section>
-        </div>
-
-        <footer>
-            <p>&copy; 2025 Umoja Ni Nguvu Hotel. All Rights Reserved.</p>
-        </footer>
+  <section id="menu">
+    <h2>🍽️ Our Menu</h2>
+    <div class="menu-list">
+      <div class="menu-item">
+        <h3>Ugali & Nyama Choma</h3>
+        <p>KES 350</p>
+      </div>
+      <div class="menu-item">
+        <h3>Chicken Fry with Chips</h3>
+        <p>KES 400</p>
+      </div>
+      <div class="menu-item">
+        <h3>Matoke Special</h3>
+        <p>KES 250</p>
+      </div>
+      <div class="menu-item">
+        <h3>Chapati & Beans</h3>
+        <p>KES 150</p>
+      </div>
+      <div class="menu-item">
+        <h3>Fresh Juice</h3>
+        <p>KES 100</p>
+      </div>
     </div>
+  </section>
+
+  <section id="location">
+    <h2>📍 Our Location - Kakuma</h2>
+    <p>We are located at the heart of Kakuma town.</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15950.403462149607!2d34.8666!3d3.7224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1714d0ebecab2d01%3A0xe6ba930d2b6e0f2c!2sKakuma!5e0!3m2!1sen!2ske!4v1628000000000!5m2!1sen!2ske"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <section id="contact">
+    <h2>📞 Contact Us</h2>
+    <p><strong>Phone:</strong> +254 712 345 678</p>
+    <p><strong>Email:</strong> info@umojaninguvuhotel.co.ke</p>
+    <p><strong>Hours:</strong> 8am - 9pm Daily</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Umoja Ni Nguvu Hotel, Kakuma. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 </html>
